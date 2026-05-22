@@ -1,0 +1,20 @@
+Nome: oi
+ Preço: 1,20
+ Quantidade: 12
+ ------------//------------
+Nome: elelelele
+ Preço: 1,00
+ Quantidade: 0
+ ------------//------------
+Nome: ,8
+ Preço: 2,00
+ Quantidade: 2
+ ------------//------------
+Nome: 2
+ Preço: 2,00
+ Quantidade: 2
+ ------------//------------
+Nome: 2
+ Preço: 2,00
+ Quantidade: 2
+ ------------//------------

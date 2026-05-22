@@ -1,0 +1,32 @@
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+
+Idade: 10
+Altura: 10,00
+Media alturas: 10,00
+Media idades: 10,00
