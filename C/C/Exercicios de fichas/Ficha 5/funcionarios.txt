@@ -1,0 +1,20 @@
+Nome: 1
+Salário: 2,00
+Departamento: 3
+----------//----------
+Nome: 4
+Salário: 5,00
+Departamento: 6
+----------//----------
+Nome: 7
+Salário: 8,00
+Departamento: 9
+----------//----------
+Nome: 1
+Salário: 2,00
+Departamento: 3
+----------//----------
+Nome: 4
+Salário: 5,00
+Departamento: 6
+----------//----------
