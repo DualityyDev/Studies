@@ -11,8 +11,17 @@ Repositório dedicado aos meus estudos de **lógica de programação** e ao dese
 
 ---
 
-## 🧠 Linguagens em Uso & Aplicação na Lógica
+## 🧠 Linguagens & Aplicação na Lógica
 
+### 🔄 Em Aprendizado
+| Linguagem | Badge | Aplicação Prática no Meu Aprendizado |
+| :--- | :---: | :--- |
+| **C++** | ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) | **Orientação a Objetos & Algoritmos:** Aprofundamento em estruturas de dados, POO e resolução de problemas complexos. |
+| **HTML** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | **Estruturação Web:** Aprendizado de semântica web e organização estrutural de documentos. |
+| **CSS** | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | **Estilização & Layouts:** Aplicação de estilos, regras visuais e conceitos de design responsivo. |
+| **Visual Basic** | ![Visual Basic](https://img.shields.io/badge/Visual_Basic-5C2D91?style=flat-square&logo=visualstudio&logoColor=white) | **Programação Orientada a Eventos:** Desenvolvimento de interfaces gráficas e automações com formulários. |
+
+### ✅ Aprendidas
 | Linguagem | Badge | Aplicação Prática no Meu Aprendizado |
 | :--- | :---: | :--- |
 | **Pascalzim (Pascal)** | ![Pascal](https://img.shields.io/badge/Pascal-055393?style=flat-square&logo=pascal&logoColor=white) | **Primeiros Passos na Lógica:** Usado para entender a estrutura fundamental de um algoritmo, variáveis, condicionais e laços de repetição. |
@@ -25,12 +34,12 @@ Repositório dedicado aos meus estudos de **lógica de programação** e ao dese
 Paralelamente aos estudos de programação, estou a explorar e a construir um **HomeLab experimental e de testes** para adquirir bagagem prática em infraestrutura, com o objetivo de preparar terreno para um ambiente futuro mais avançado e profissional.
 
 ### 🧪 Em Testes & Melhorias Constantes
-* 🍿 **Jellyfin:** Servidor de media streaming local.
-* ☁️ **Nextcloud:** Nuvem privada para armazenamento e gestão de dados.
-* 🏠 **Home Assistant:** Central de automação residencial e integração de dispositivos.
+- 🍿 **Jellyfin:** Servidor de media streaming local.
+- ☁️ **Nextcloud:** Nuvem privada para armazenamento e gestão de dados.
+- 🏠 **Home Assistant:** Central de automação residencial e integração de dispositivos.
 
 ### 📌 Em Planeamento
-* 🛡️ **Pi-hole:** Implementação de bloqueador de anúncios e gestão de DNS a nível de rede.
+- 🛡️ **Pi-hole:** Implementação de bloqueador de anúncios e gestão de DNS a nível de rede.
 
 ---
 
