@@ -1,0 +1,25 @@
+#include <iostream>
+#include <windows.h>
+#include <iomanip>
+#include "Geometria.h"
+using namespace std;
+
+int main()
+{
+	SetConsoleCP(1252);
+	SetConsoleOutputCP(1252);
+
+	int lado,comprimento,largura;
+	
+	cout << "Indica o valor do lado do quadrado" << endl;
+	cin >> lado;
+	cout << "Indica o valor do comprimento do retangulo" << endl;
+	cin >> comprimento;
+	cout << "Indica o valor da largura do retangulo" << endl;
+	cin >> largura;
+	
+	cout << "Area do quadrado: " << Geometria::area_quadrado(lado) 
+		<< endl << "Area retangulo: " << Geometria::area_retangulo(comprimento,largura);
+	
+	return 0;
+}

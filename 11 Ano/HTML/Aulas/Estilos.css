@@ -1,0 +1,43 @@
+
+h1 {
+    background-color: royalblue;
+    padding-left: 0px;
+    border-width: 4px ;
+    border-color:blue;
+    border-style: solid;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+
+}
+.card {
+    color: green;
+}
+.aviso{
+    color: orange;
+    font-style: oblique;
+    font-style: italic;
+    font-weight: bold;
+}
+.emLinha{
+    display: inline-block;
+    width: 150px;
+    background-color: aquamarine;
+}
+table{
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+th{
+    background-color: rgb(0, 255, 247);
+}
+th , td{
+    border: 1px solid navy;
+    padding: 8px;
+}
+caption{
+        font-weight: bold;
+}
+.chingalin{
+    background-color: yellow;
+}

@@ -1,0 +1,10 @@
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\bin\Debug\11TGPSIEX2.exe.config
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\obj\Debug\_11TGPSIEX2.Form1.resources
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\obj\Debug\_11TGPSIEX2.Resources.resources
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\obj\Debug\11TGPSIEX2.vbproj.GenerateResource.Cache
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\bin\Debug\11TGPSIEX2.exe
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\bin\Debug\11TGPSIEX2.pdb
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\bin\Debug\11TGPSIEX2.xml
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\obj\Debug\11TGPSIEX2.exe
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\obj\Debug\11TGPSIEX2.xml
+c:\users\etpc-aluno\documents\visual studio 2013\Projects\11TGPSIEX2\11TGPSIEX2\obj\Debug\11TGPSIEX2.pdb

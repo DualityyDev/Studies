@@ -1,0 +1,11 @@
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: cyan;
+
+}
+th, td{
+    border: 1px solid navy;
+    padding: 8px;
+}
