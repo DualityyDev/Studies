@@ -1,0 +1,256 @@
+// main
+#include <iostream>
+#include <windows.h>
+#include <iomanip>
+#include "Loja.h"
+using namespace std;
+using namespace Loja;
+int main()
+{
+	
+	SetConsoleCP(1252);
+	SetConsoleOutputCP(1252);
+	
+	Produto pd;
+	Caixa caixa;
+	string pesquisa, produto;
+	caixa.iniciar();
+	int stock, Quantidade_Venda, i=0,OP,a;
+	double Descontos = 0.1,PrecoTotal,preco_Quase_total,b;
+	
+	pd.nome[0] = "Caderno";
+	pd.preco[0] = 9.99;
+	pd.quant_stock[0] = 20;
+	
+	pd.nome[1] = "Caneta";
+	pd.preco[1] = 0.99;
+	pd.quant_stock[1] = 100;
+	
+	pd.nome[2] = "Corretor";
+	pd.preco[2] = 2.99;
+	pd.quant_stock[2] = 50;
+
+	Dados(pd);
+	i = 0;
+	cout << endl;
+	
+	pesquisa = "Corretor";
+	cout << "Pesquisa:  " << pesquisa << endl;
+	try
+	{
+		i = ProcurarProduto(pesquisa, pd);
+		cout << "==== Resultado ====" << endl
+		<< "Nome: " << pd.nome[i] << endl
+		<< "Preco: " << pd.preco[i] << endl
+		<< "Quantidade: " << pd.quant_stock[i] << endl;
+	}
+	catch(const char* mensagem)
+	{
+		cout << endl << "Erro: " << mensagem << endl;
+	}
+
+	cout << endl;
+	
+	stock = 20;
+	cout << "==== Alterar Stock ====" << endl
+	<< "Produto: " << pd.nome[i] << endl
+	<< "Stock: " << pd.quant_stock[i] << endl
+	<< "Alterar para: " << stock << endl;
+	AlterarStock(stock, pd ,i);
+	cout << "Valor atualizado" << endl;
+	
+	cout << endl;
+	
+	cout << "==== Vendas ====" << endl;
+	produto = "Caneta";
+	Quantidade_Venda = 5;
+	try
+	{
+		i = ProcurarProduto(produto, pd);
+		cout << "Nome: " << pd.nome[i] << endl;
+		cout << "Quantidade: " << Quantidade_Venda << endl;	
+		ValidarStock(Quantidade_Venda,pd,i);
+		
+		preco_Quase_total = pd.preco[i] * Quantidade_Venda;
+		PrecoTotal = Desconto(preco_Quase_total, Descontos);
+		
+		ValidarPreco(PrecoTotal);
+
+		caixa.registrarVenda(PrecoTotal);
+
+		cout << fixed << setprecision(2);
+		cout << "Preço total: " << PrecoTotal << endl;
+		cout << "Atualização stock: " << pd.quant_stock[i] << endl;
+	}
+	catch(const char* mensagem)
+	{
+		cout << "Erro: " << mensagem << endl;
+	}
+
+cout << "==== Vendas ====" << endl;
+	produto = "Caderno";
+	Quantidade_Venda = 500;
+	try
+	{
+		i = ProcurarProduto(produto, pd);
+		cout << "Nome: " << pd.nome[i] << endl;
+		cout << "Quantidade: " << Quantidade_Venda << endl;	
+		ValidarStock(Quantidade_Venda,pd,i);
+		
+		preco_Quase_total = pd.preco[i] * Quantidade_Venda;
+		PrecoTotal = Desconto(preco_Quase_total, Descontos);
+		
+		ValidarPreco(PrecoTotal);
+
+		caixa.registrarVenda(PrecoTotal);
+
+		cout << fixed << setprecision(2);
+		cout << "Preço total: " << PrecoTotal << endl;
+		cout << "Atualização stock: " << pd.quant_stock[i] << endl;
+	}
+	catch(const char* mensagem)
+	{
+		cout << "Erro: " << mensagem << endl;
+	}
+		OP = 2;
+	cout << endl << "1 - Resumo Simples" << endl << "2 - Resumo Completo" << endl << OP;
+
+	switch (OP)
+{
+    case 1:
+        caixa.consultarTotais();
+        break;
+    case 2:
+        caixa.consultarTotais(pd);
+        break;
+}
+	return 0;
+}
+// .cpp
+#include "Loja.h"
+#include <iostream>
+#include <iomanip>
+using namespace Loja;
+using namespace std;
+namespace Loja{
+void ValidarPreco(double preco)
+{
+	if (preco <= 0)
+		throw "Preço Inválido";
+}
+
+int ProcurarProduto(string pesquisa,const Produto& pd) 
+{
+	int i;
+	for (i= 0; i < 3; i++ )
+	{
+		if (pesquisa == pd.nome[i])
+			return i;
+	}
+	throw "Produto não encontrado";
+}
+
+double Desconto(double preco,double Desconto)
+{
+	if (Desconto >= 1)
+		Desconto = Desconto / 100;
+	else {
+		Desconto = 0.1;
+		cout << "Desconto omitido! A usar predefinido" << endl;
+	}
+		
+	double PF;
+	PF = preco - (Desconto*preco);
+	return PF; 	
+}
+
+void AlterarStock(int stock ,Produto& pd,int i)
+{
+	pd.quant_stock[i] = stock;
+}
+
+void Caixa::iniciar(){
+	total_de_vendas = 0.0;
+	numero_de_vendas = 0;
+}
+
+void Caixa::registrarVenda(double valor)
+{
+	total_de_vendas += valor;
+	numero_de_vendas++;
+}
+
+void Caixa::consultarTotais()
+{
+	cout << fixed << setprecision(2) ;
+	cout << endl << "==== Estado da Caixa ====" << endl;
+	cout << "Nº de Vendas: " << numero_de_vendas << endl;
+	cout << "Total Faturado: "<< total_de_vendas << endl;
+}
+
+void Caixa::consultarTotais(const Produto& pd)
+{
+	cout << fixed << setprecision(2) ;
+	cout << endl << "==== Estado da Caixa ====" << endl;
+	cout << "Nº de Vendas: " << numero_de_vendas << endl;
+	cout << "Total Faturado: "<< total_de_vendas << endl
+	 << "Produtos em Stock";
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Nome: "<< pd.nome[i] << endl
+		<< "Preco: " << pd.preco[i] << endl 
+		<< "Quantidade: " << pd.quant_stock[i] << endl
+		<< "------//------" << endl;
+	}
+	}
+void Dados(const Produto& pd){
+	cout << "==== Dados ====" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Nome: "<< pd.nome[i] << endl
+		<< "Preco: " << pd.preco[i] << endl 
+		<< "Quantidade: " << pd.quant_stock[i] << endl
+		<< "------//------" << endl;
+	}
+	}
+	
+void ValidarStock(int Quantidade, Produto& pd,int  i)
+{
+	if (pd.quant_stock[i] >= Quantidade)
+		pd.quant_stock[i] -= Quantidade;
+	else
+		throw "Quantidade insuficiente";
+}
+
+}
+//.h
+#ifndef LOJA_H
+#define LOJA_H
+#include <string>
+using namespace std;
+namespace Loja
+{
+	struct Produto {
+		string nome[3];
+		double preco[3];
+		int quant_stock[3];
+	};
+	void ValidarPreco(double preco);
+	int ProcurarProduto(string pesquisa,const Produto& p);
+	double Desconto(double preco, double Desconto);
+	void AlterarStock(int stock ,Produto& pd,int i);
+	void Dados(const Produto& pd);
+	void ValidarStock(int Quantidade,Produto& pd, int i);
+	class Caixa
+	{
+	private:
+		double total_de_vendas;
+		int numero_de_vendas;
+	public:
+		void iniciar();
+		void registrarVenda(double valor);
+		void consultarTotais();
+		void consultarTotais(const Produto& pd);
+	};
+};
+#endif
